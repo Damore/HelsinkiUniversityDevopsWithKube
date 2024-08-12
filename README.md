@@ -1,0 +1,1 @@
+This repo is used for submitting all exercises related to the course DevOps with Kube
