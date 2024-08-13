@@ -5,13 +5,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.gabriel</groupId>
-    <artifactId>random-string-generator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>log-output</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <image.path>registry.hub.docker.com/damore82/</image.path>
     </properties>
+    <build>
+        <plugins>
+            <!-- JIB -->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.3</version>
+                <configuration>
+                    <to>
+                        <image>${image.path}${project.name}:${project.version}</image>
+                    </to>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
