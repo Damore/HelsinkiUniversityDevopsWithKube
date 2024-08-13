@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
         - name: log-output
-          image: damore82/random-generator:1.0.3-RELEASE
+          image: damore82/log-output:1.0.3-SNAPSHOT
       
