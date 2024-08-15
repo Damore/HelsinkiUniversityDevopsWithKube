@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-spring-app-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-spring-app
+  template:
+    metadata:
+      labels:
+        app: todo-spring-app
+    spec:
+      containers:
+        - name: project-todo-app
+          image: damore82/todo-spring-app:v0.2
+      
